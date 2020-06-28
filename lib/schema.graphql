@@ -1,0 +1,14 @@
+type TvShows {
+_id: ID
+title: String
+genre: String
+network: String
+creators: [String]
+producers: [String]
+seasons: Int
+}
+
+type Query {
+  "return all Tv Shows"
+  getTvShows: [TvShows]
+}
