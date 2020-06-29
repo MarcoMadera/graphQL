@@ -11,5 +11,19 @@ seasons: Int
 type Query {
   "return all Tv Shows"
   getTvShows: [TvShow]
+  "return one Tv Show"
   getTvShow(id: ID!): TvShow
+}
+
+input TvShowInput {
+  title: String!
+  genre: String!
+  network: String
+  creators: [String]
+  producers: [String]
+  seasons: Int!
+}
+
+type Mutation {
+  addTvShow(input: TvShowInput!): TvShow
 }
