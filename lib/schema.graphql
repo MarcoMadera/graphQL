@@ -1,4 +1,4 @@
-type TvShows {
+type TvShow {
 _id: ID
 title: String
 genre: String
@@ -10,5 +10,6 @@ seasons: Int
 
 type Query {
   "return all Tv Shows"
-  getTvShows: [TvShows]
+  getTvShows: [TvShow]
+  getTvShow(id: ID!): TvShow
 }
