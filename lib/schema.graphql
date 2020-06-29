@@ -24,6 +24,16 @@ input TvShowInput {
   seasons: Int!
 }
 
+input TvShowEditInput {
+  title: String
+  genre: String
+  network: String
+  creators: [String]
+  producers: [String]
+  seasons: Int
+}
+
 type Mutation {
   addTvShow(input: TvShowInput!): TvShow
+  editTvShow(_id: ID!, input: TvShowEditInput): TvShow
 }
