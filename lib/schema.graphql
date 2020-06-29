@@ -36,4 +36,5 @@ input TvShowEditInput {
 type Mutation {
   addTvShow(input: TvShowInput!): TvShow
   editTvShow(_id: ID!, input: TvShowEditInput): TvShow
+  deleteTvShow(_id: ID!): TvShow
 }
