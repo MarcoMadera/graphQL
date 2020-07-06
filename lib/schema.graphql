@@ -1,3 +1,12 @@
+enum Rating {
+ AA
+ A
+ B
+ B15
+ C
+ D
+}
+
 type TvShow {
 _id: ID
 title: String
@@ -7,6 +16,7 @@ creators: [String]
 producers: [String]
 seasons: Int
 cast: [Actors]
+rating: Rating
 }
 
 type Actors {
@@ -28,6 +38,8 @@ input TvShowInput {
   creators: [String]
   producers: [String]
   seasons: Int!
+  cast: [ID]
+  rating: Rating
 }
 
 input TvShowEditInput {
@@ -37,6 +49,7 @@ input TvShowEditInput {
   creators: [String]
   producers: [String]
   seasons: Int
+  rating: Rating
 }
 
 type Mutation {
